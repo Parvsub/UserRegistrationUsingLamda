@@ -27,9 +27,21 @@ public class UserRegistrationValidation {
         boolean m = matcher.matches();
         System.out.println(m);
     }
+    public void getEmail() {
+        UserRegistrationValidation user = new UserRegistrationValidation();
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Enter the Last name");
+        UserDetails userDetails = new UserDetails(scanner.nextLine());
+        Pattern pattern = Pattern.compile("[abc]{3}.[a-z]{3}+@[bl]{2}.[co]{2}.[a-z]{2}+");
+        Matcher matcher = pattern.matcher(userDetails.Email);
+        boolean m = matcher.matches();
+        System.out.println(m);
+    }
+
     public static void main(String[] args) {
         UserRegistrationValidation user=new UserRegistrationValidation();
         user.getFirstName();
         user.getLastName();
+        user.getEmail();
     }
 }
