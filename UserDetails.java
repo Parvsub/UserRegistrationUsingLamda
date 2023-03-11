@@ -1,21 +1,59 @@
 package com.UserRegistrationUsinglamda;
-
 public class UserDetails {
-    String firstName;
-    String LastName;
-    String Email;
-    String MobileNumber;
-    String Password;
 
-    public UserDetails(String firstName,String LastName,String Email,String MobileNumber,String Password){
+private String firstName;
+private String  lastName;
+private String  emailAddress;
+private String  password;
+
+public String getPassword() {
+        return password;
+        }
+
+public void setPassword(String password) {
+        this.password = password;
+        }
+
+private String mobileNo;
+
+public String getMobileNo() {
+        return mobileNo;
+        }
+
+public void setMobileNo(String mobileNo) {
+        this.mobileNo = mobileNo;
+        }
+
+public UserDetails(String firstName, String lastName){
         this.firstName=firstName;
-        this.LastName = LastName;
-        this.Email = Email;
-        this.MobileNumber=MobileNumber;
-        this.Password= Password;
-    }
-    public UserDetails(){}
+        this.lastName=lastName;
+        }
+public UserDetails(String emailAddress){
+        this.emailAddress=emailAddress;
+        }
+public UserDetails(){}
 
-    public UserDetails(String nextLine) {
-    }
+public String getFirstName() {
+        return firstName;
+        }
+
+public void setFirstName(String firstName) {
+        this.firstName = firstName;
+        }
+
+public String getLastName() {
+        return lastName;
+        }
+
+public void setLastName(String lastName) {
+        this.lastName = lastName;
+        }
+
+public String getEmailAddress() {
+        return emailAddress;
+        }
+
+public void setEmailAddress(String emailAddress) {
+        this.emailAddress = emailAddress;
+        }
 }
