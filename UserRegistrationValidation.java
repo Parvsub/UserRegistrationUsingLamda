@@ -37,11 +37,23 @@ public class UserRegistrationValidation {
         boolean m = matcher.matches();
         System.out.println(m);
     }
+    public void getMobileNumber() {
+        UserRegistrationValidation user = new UserRegistrationValidation();
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Enter the Last name");
+        UserDetails userDetails = new UserDetails(scanner.nextLine());
+        Pattern pattern = Pattern.compile("([19]{2}+\\s[0-9]{10})");
+        Matcher matcher = pattern.matcher(userDetails.MobileNumber);
+        boolean m = matcher.matches();
+        System.out.println(m);
+    }
+
 
     public static void main(String[] args) {
         UserRegistrationValidation user=new UserRegistrationValidation();
         user.getFirstName();
         user.getLastName();
         user.getEmail();
+        user.getMobileNumber();
     }
 }
